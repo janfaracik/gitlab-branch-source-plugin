@@ -1,5 +1,6 @@
 package io.jenkins.plugins.gitlabbranchsource.helpers;
 
+import static io.jenkins.plugins.gitlabbranchsource.helpers.GitLabIcons.ICON_GITLAB;
 import static org.apache.commons.lang.StringUtils.defaultIfBlank;
 
 import edu.umd.cs.findbugs.annotations.NonNull;
@@ -43,27 +44,27 @@ public class GitLabLink implements Action, IconSpec {
     }
 
     public static GitLabLink toGroup(String url) {
-        return new GitLabLink("gitlab-logo", url, "Group");
+        return new GitLabLink(ICON_GITLAB, url, "GitLab");
     }
 
     public static GitLabLink toProject(String url) {
-        return new GitLabLink("gitlab-project", url, "Project");
+        return new GitLabLink(ICON_GITLAB, url, "GitLab");
     }
 
     public static GitLabLink toBranch(String url) {
-        return new GitLabLink("gitlab-branch", url, "Branch");
+        return new GitLabLink(ICON_GITLAB, url, "GitLab");
     }
 
     public static GitLabLink toMergeRequest(String url) {
-        return new GitLabLink("gitlab-mr", url, "Merge Request");
+        return new GitLabLink(ICON_GITLAB, url, "GitLab");
     }
 
     public static GitLabLink toTag(String url) {
-        return new GitLabLink("gitlab-tag", url, "Tag");
+        return new GitLabLink(ICON_GITLAB, url, "GitLab");
     }
 
     public static GitLabLink toCommit(String url) {
-        return new GitLabLink("gitlab-commit", url, "Commit");
+        return new GitLabLink(ICON_GITLAB, url, "GitLab");
     }
 
     @NonNull
